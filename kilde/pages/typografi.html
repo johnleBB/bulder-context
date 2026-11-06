@@ -1,0 +1,50 @@
+<section>
+  <h2>Skrifttype</h2>
+  <p>Alt i Bulder settes i <b>Aeonik</b>. Den finnes i Regular, Medium og Bold, og Regular og Medium har også kursiv.</p>
+  <div class="weights">
+    <div><span class="aa" style="font-weight:400">Aa</span><b>Regular 400</b><span class="app-caption">Sekundærtekst og tekstknapper</span></div>
+    <div><span class="aa" style="font-weight:500">Aa</span><b>Medium 500</b><span class="app-caption">Brødtekst, ingress og primærknapper</span></div>
+    <div><span class="aa" style="font-weight:700">Aa</span><b>Bold 700</b><span class="app-caption">Overskrifter og etiketter</span></div>
+  </div>
+  <p class="app-body-2" style="font-size:1.5rem;letter-spacing:.03em">ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ<br>abcdefghijklmnopqrstuvwxyzæøå<br>0123456789 kr % + − ,</p>
+  <div class="callout"><svg class="ic"><use href="#i-Icons-lock"/></svg><p>Aeonik er en lisensiert skrift. Ikke del fontfilene utenfor Bulder.</p></div>
+</section>
+<section>
+  <h2>Typeskala</h2>
+  <p>Bulder har én typeskala, som brukes både i appen og på nettsiden. Du trenger ikke egne størrelser for mobil, nettbrett og desktop.</p>
+  {{type:specimens}}
+</section>
+<section>
+  <h2>Størrelser på web</h2>
+  <p>På web oppgis alle tekststørrelser i rem, med 16 px som grunnlag (rem = px ÷ 16). Da følger teksten tekststørrelsen kunden har valgt i nettleseren.</p>
+  {{type:table}}
+  <ul class="list">
+    <li>La rotelementet stå på nettleserens standard: <code>html { font-size: 100%; }</code>. Ikke bruk 62,5 % eller en px-verdi.</li>
+    <li>Linjehøyde er uten enhet (1.44, 1.56) eller <code>normal</code>.</li>
+    <li>Sporing (letter-spacing) oppgis i em.</li>
+    <li>Spacing, hjørner og ikonstørrelser beholder tokenverdiene sine.</li>
+  </ul>
+</section>
+<section>
+  <h2>Tekstfarge</h2>
+  <ul class="list">
+    <li>All tekst bruker <code>On_Surface</code>.</li>
+    <li><code>app-caption</code> og <code>app-overline</code> bruker <code>On_Surface_Variant</code>.</li>
+    <li>På en farget flate bruker du flatens <code>On_</code>-farge, for eksempel <code>On_Primary</code> på en primærknapp.</li>
+    <li>Overlines skrives med store bokstaver. Det må du sette selv, for tokenet gjør det ikke.</li>
+  </ul>
+</section>
+<section>
+  <h2>Størrelser utenfor skalaen</h2>
+  <p>Noen komponenter har tekst som ikke passer i skalaen. De beholder størrelsene fra Figma med vilje.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>App</th><th>Web</th><th>Brukes til</th></tr></thead>
+    <tbody>
+      <tr><td class="num">10 px</td><td class="num">0.625rem</td><td>Etiketter i bunnmenyen og merker på kort</td></tr>
+      <tr><td class="num">12 px</td><td class="num">0.75rem</td><td>Tagger, filterchips, merker i lister og etiketter for rentetrinn</td></tr>
+      <tr><td class="num">14 px</td><td class="num">0.875rem</td><td>Sekundærlinjer uten egen stil</td></tr>
+      <tr><td class="num">18 px</td><td class="num">1.125rem</td><td>Kortnumre</td></tr>
+      <tr><td class="num">26 px</td><td class="num">1.625rem</td><td>Den store saldoen på kontoen</td></tr>
+    </tbody>
+  </table></div>
+</section>

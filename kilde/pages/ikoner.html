@@ -1,0 +1,190 @@
+<section>
+        <h2>Ikoner hjelper kunden å finne fram</h2>
+        <p>Ikoner gjør det enkelt å navigere i appen og på nettsiden. De står for funksjoner, verktøy og handlinger, og viser hva som skjer når kunden trykker.</p>
+        <div class="duo">
+          <div class="mode">
+            <div class="app-overline">Toppnivå</div>
+            <div class="screen">
+              <div class="hdr">
+                <div class="avatar">KB</div><div class="title">Hjem</div>
+                <button class="touch" aria-label="Chat"><span class="base"><svg class="ic"><use href="#i-Icons-chat"/></svg></span></button>
+                <button class="touch" aria-label="Innstillinger"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></button>
+              </div>
+              <div class="rows">
+                <div class="row"><svg class="ic"><use href="#i-Icons-creditcard_mini"/></svg><span>Kort</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-history"/></svg><span>Historikk</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-help"/></svg><span>Hjelp</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="mode">
+            <div class="app-overline">Undernivå</div>
+            <div class="screen">
+              <div class="hdr">
+                <button class="touch" aria-label="Tilbake"><svg class="ic"><use href="#i-Navigation-arrow_left"/></svg></button>
+                <div class="title center">Sparekonto</div>
+                <button class="touch" aria-label="Innstillinger"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></button>
+              </div>
+              <div class="rows">
+                <div class="row"><svg class="ic"><use href="#i-Icons-target"/></svg><span>Sparemål</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-percent"/></svg><span>Rente</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-copy"/></svg><span>Kopier kontonummer</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Ikonbiblioteket i Bulder designsystem</h2>
+        <p>Ikonene våre ligger i designsystemet, tegnet på et 32 × 32 lerret. De er delt i gruppene <b>Icons</b> (generelle UI-ikoner), <b>Navigation</b> (piler, chevroner og bunnmenyen), <b>Categories</b>, <b>Memo categories</b>, <b>Min Bulder</b>, <b>Payment</b>, <b>Flags</b> og <b>No padding</b>.</p>
+        <div class="callout">
+          <svg class="ic"><use href="#i-Icons-warning"/></svg>
+          <p>Ikke lag nye ikoner utenfor biblioteket, og ikke tegn om de som finnes. Mangler du et ikon, ta det opp med designsystem-teamet.</p>
+        </div>
+        <p>Hele samlingen, med komponenter og retningslinjer, finner du i <a href="https://claude.ai/artifact/DD4Am4KMqWiVPcRoF5w9gv" target="_blank" rel="noopener">Bulder designsystem</a>. I kode tegner komponenten <code>Icon</code> ikonene i gjeldende tekstfarge, og <code>Bulder.icons</code> lister dem.</p>
+      </section>
+
+      <section>
+        <h2>Spesifikasjoner</h2>
+        <p>Når du bruker ikoner, skal disse spesifikasjonene følges:</p>
+        <dl class="spec">
+          <dt>Format</dt>
+          <dd><span>SVG, tegnet på et 32 × 32 px lerret</span><span class="app-caption">Lerretet har luft rundt symbolet. Skaler hele filen, ikke beskjær den.</span></dd>
+          <dt>Farge</dt>
+          <dd><span>Én farge: <code>grey-100</code></span><span class="app-caption">Ikonene er tegnet for mørk eller farget bakgrunn. På lys bakgrunn farger du dem om i kode til tekstfargen, <code>On_Surface</code>. På et farget merke bruker du merkets <code>on_</code>-token.</span></dd>
+          <dt>Størrelser</dt>
+          <dd>
+            <div class="sizes">
+              <figure><span class="box"><svg class="ic" style="--s:16px"><use href="#i-Icons-settings"/></svg></span><figcaption class="app-caption">xSmall 16</figcaption></figure>
+              <figure><span class="box"><svg class="ic" style="--s:20px"><use href="#i-Icons-settings"/></svg></span><figcaption class="app-caption">small 20</figcaption></figure>
+              <figure><span class="box"><svg class="ic" style="--s:24px"><use href="#i-Icons-settings"/></svg></span><figcaption class="app-caption">medium 24</figcaption></figure>
+              <figure><span class="box"><svg class="ic" style="--s:28px"><use href="#i-Icons-settings"/></svg></span><figcaption class="app-caption">large 28</figcaption></figure>
+              <figure><span class="box"><svg class="ic" style="--s:60px"><use href="#i-Icons-settings"/></svg></span><figcaption class="app-caption">xLarge 60</figcaption></figure>
+            </div>
+            <span class="app-caption">Bruk tokenene <code>icon-xSmall</code> til <code>icon-xLarge</code>. <code>icon-xxSmall</code> (8 px) finnes også, for små markører.</span>
+          </dd>
+          <dt>Ikonbase</dt>
+          <dd><span><code>.basewithicon</code>: sirkel på 32 px i <code>SurfaceContainer</code></span><span class="app-caption">Trykkflaten er 44 × 44 px, sentrert på sirkelen.</span></dd>
+          <dt>Komponenter</dt>
+          <dd><span><code>Icon</code>, <code>IconBadge</code> og <code>RoundIconButton</code></span></dd>
+          <dt>Filnavn</dt>
+          <dd><span>Behold navnene fra repoet</span><span class="app-caption">Også de som er feilstavet, som <code>calender</code>, <code>hidde_eye</code> og <code>idaes</code>.</span></dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>Eksempel på light mode og dark mode</h2>
+        <p>I light mode har ikonbasen samme farge som ikonblekket, så ikonet må fargelegges med <code>On_Surface</code>. I dark mode leses <code>grey-100</code> direkte på basen.</p>
+        <label class="toggle" for="base-demo"><input type="checkbox" id="base-demo" role="switch" checked> Vis ikonbase</label>
+        <div class="duo" id="ld">
+          <div class="mode force-light">
+            <div class="app-overline">Light mode</div>
+            <div class="screen">
+              <div class="hdr">
+                <div class="avatar">KB</div><div class="title">Sparing</div>
+                <button class="touch" aria-label="Legg til"><span class="base"><svg class="ic"><use href="#i-Icons-add"/></svg></span></button>
+                <button class="touch" aria-label="Innstillinger"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></button>
+              </div>
+              <div class="rows">
+                <div class="row"><svg class="ic"><use href="#i-Icons-notification"/></svg><span>Varsler</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-security"/></svg><span>Sikkerhet</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+              </div>
+            </div>
+          </div>
+          <div class="mode force-dark">
+            <div class="app-overline">Dark mode</div>
+            <div class="screen">
+              <div class="hdr">
+                <div class="avatar">KB</div><div class="title">Sparing</div>
+                <button class="touch" aria-label="Legg til"><span class="base"><svg class="ic"><use href="#i-Icons-add"/></svg></span></button>
+                <button class="touch" aria-label="Innstillinger"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></button>
+              </div>
+              <div class="rows">
+                <div class="row"><svg class="ic"><use href="#i-Icons-notification"/></svg><span>Varsler</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+                <div class="row"><svg class="ic"><use href="#i-Icons-security"/></svg><span>Sikkerhet</span><svg class="ic chev"><use href="#i-Navigation-chevron_right"/></svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Når skal ikonet ha bakgrunn?</h2>
+        <ul class="list">
+          <li><b>Ikoner som står alene</b>, som handlingene i en <code>Header</code>, står alltid på ikonbasen.</li>
+          <li><b>Tilbakepiler</b> har aldri bakgrunn.</li>
+          <li><b>Ikoner i listerader</b> (<code>MenuListItem</code>, <code>MenuListDetailItem</code>, <code>PropertyFacts</code> og lignende) har ikke bakgrunn.</li>
+          <li><b>Fargede merker</b> for kategorier, betaling og Min Bulder (<code>IconBadge</code> med <code>iconColor</code>) er noe annet og beholder fargen sin.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Fargede merker</h2>
+        <p>Kategori-, betalings- og Min Bulder-ikoner står på et farget merke på 32 px. Merket bruker gruppens fargetoken, og ikonet bruker tilhørende <code>on_</code>-token. Under er de vist i 40 px.</p>
+        <h3 class="app-h3">Categories</h3>
+        <div class="badges" id="b-Categories"></div>
+        <h3 class="app-h3">Payment</h3>
+        <div class="badges" id="b-Payment"></div>
+        <h3 class="app-h3">Min Bulder</h3>
+        <div class="badges" id="b-Min Bulder"></div>
+      </section>
+
+      <section>
+        <h2>Ikoner fra andre merkevarer</h2>
+        <p>Vipps, BankID, SpareBank 1 Nord-Norge og andre merkevarer har egne ikoner og regler for bruk. Bruk ikonene deres, og sjekk at du følger retningslinjene.</p>
+        <div class="badges">
+          <figure><svg class="ic" style="--s:40px"><use href="#i-Icons-Vipps"/></svg><figcaption>Vipps.svg</figcaption></figure>
+          <figure><svg class="ic" style="--s:40px"><use href="#i-Icons-bankid"/></svg><figcaption>bankid.svg</figcaption></figure>
+          <figure><svg class="ic" style="--s:40px"><use href="#i-Icons-sbn"/></svg><figcaption>sbn.svg</figcaption></figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Konsekvent bruk</h2>
+        <p>Bruk samme ikon for innhold med samme funksjon. Da kjenner kunden igjen funksjonen på tvers av sidene.</p>
+        <p>Det er også et lovkrav: elementer som har samme funksjon på tvers av sider, skal ha lik utforming (WCAG 3.2.4). Les mer hos <a href="https://www.uutilsynet.no/wcag-standarden/324-konsekvent-identifikasjon-niva-aa/116" target="_blank" rel="noopener">Uutilsynet</a>.</p>
+        <div class="duo">
+          <div class="panel" style="display:grid;gap:16px">
+            <div class="verdict no"><span class="dot">✕</span>Ikke slik</div>
+            <div class="hdr"><div class="title">Hjem</div><span class="touch"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></span></div>
+            <div class="hdr"><div class="title">Sparing</div><span class="touch"><span class="base mark-wrong"><svg class="ic"><use href="#i-Icons-payment_setting"/></svg></span></span></div>
+            <p class="app-caption">Begge knappene åpner innstillinger, men har ulike ikoner.</p>
+          </div>
+          <div class="panel" style="display:grid;gap:16px">
+            <div class="verdict yes"><span class="dot">✓</span>Slik</div>
+            <div class="hdr"><div class="title">Hjem</div><span class="touch"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></span></div>
+            <div class="hdr"><div class="title">Sparing</div><span class="touch"><span class="base"><svg class="ic"><use href="#i-Icons-settings"/></svg></span></span></div>
+            <p class="app-caption">Samme funksjon, samme ikon: <code>settings</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Mest brukte ikoner</h2>
+        <p>Her er de mest brukte ikonene og hva de skal brukes til.</p>
+        <dl class="usage" id="usage"></dl>
+      </section>
+
+      <section>
+        <h2>Alle ikoner</h2>
+        <p>Søk etter et ikon, og trykk på det for å kopiere filnavnet.</p>
+        <div class="tools">
+          <label class="search" for="q"><svg class="ic" style="--s:28px"><use href="#i-Icons-search"/></svg><input id="q" type="search" placeholder="Søk, f.eks. kort eller pil" autocomplete="off"></label>
+          <div class="seg" id="groups" role="group" aria-label="Gruppe"></div>
+          <div class="seg" id="sizes" role="group" aria-label="Størrelse"></div>
+          <label class="toggle" for="base-lib"><input type="checkbox" id="base-lib" role="switch"> Ikonbase</label>
+        </div>
+        <div class="count" id="count" aria-live="polite"></div>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <section>
+        <h2>Ikoner, illustrasjoner og foto</h2>
+        <p>Største ikonstørrelse er 60 px (<code>icon-xLarge</code>). Trenger du større grafikk, er det plass til flere detaljer. Bruk da en illustrasjon eller et bilde.</p>
+        <div class="prio">
+          <div><b>Ikoner</b><span class="app-body-2">Viser funksjoner, verktøy og handlinger. Gjør det raskere å finne fram og forstå hva som skjer ved trykk.</span></div>
+          <div><b>Illustrasjoner</b><span class="app-body-2">Viser produkter og tjenester, gir tilbakemelding underveis og pynter toppen av skjermer. Se gruppene Money bags, Header art, Car info og Loan.</span></div>
+          <div><b>Foto</b><span class="app-body-2">Bygger tillit og viser ekte mennesker. Brukes på nettsiden, i annonser og i sosiale medier.</span></div>
+        </div>
+      </section>

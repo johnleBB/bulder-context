@@ -1,0 +1,65 @@
+<section>
+  <h2>Repoet</h2>
+  <p>Koden ligger i <a href="https://github.com/bulderbank/DesignSystem" target="_blank" rel="noopener">bulderbank/DesignSystem</a>. Repoet har tokens (farger, typografi og spacing), ikoner som SVG, bilder og Lottie-animasjoner. Generatoren <code>DSCodegen</code> lager pakker for iOS og Android av dem.</p>
+  <dl class="spec">
+    <dt><code>tokens/</code></dt><dd><span>Tokens som JSON</span></dd>
+    <dt><code>icons/</code></dt><dd><span>Ikoner som SVG</span></dd>
+    <dt><code>images/</code></dt><dd><span>Bilder som SVG og bitmap</span></dd>
+    <dt><code>animations/</code></dt><dd><span>Lottie-animasjoner som JSON</span></dd>
+    <dt><code>assets/fonts/</code></dt><dd><span>Aeonik</span></dd>
+    <dt><code>packages/</code></dt><dd><span>Genererte pakker for iOS og Android</span><span class="app-caption">Endre aldri filene her for hånd.</span></dd>
+  </dl>
+</section>
+<section>
+  <h2>Endringer i koden</h2>
+  <p>Foreløpig starter alle endringer med en melding i Slack. Utviklerne lenker til pull requesten i tråden, så du kan følge og kommentere den.</p>
+  {{include:slack}}
+</section>
+<section>
+  <h2>Pull requests</h2>
+  <ul class="list">
+    <li>Oppsummer endringene.</li>
+    <li>List opp hvilke genererte filer som er endret.</li>
+    <li>Legg ved skjermbilder når noe ser annerledes ut.</li>
+  </ul>
+  <p><code>@bulderbank/mobile</code> eier repoet og gjennomgår pull requests. Endringer i <code>.github/</code> gjennomgås av <code>@bulderbank/cloud</code>.</p>
+</section>
+<section>
+  <h2>Versjoner</h2>
+  <p>Nye versjoner lages automatisk når en pull request merges til <code>main</code>:</p>
+  <div class="steps">
+    <div><b>1</b><p><code>DSCodegen</code> genererer pakkene for iOS og Android.</p></div>
+    <div><b>2</b><p>Neste versjonsnummer regnes ut, for eksempel fra 1.0.139 til 1.0.140.</p></div>
+    <div><b>3</b><p>De genererte filene legges på grenen <code>automation/&lt;versjon&gt;</code>, og versjonen tagges.</p></div>
+    <div><b>4</b><p>Android-pakken publiseres. iOS-appen henter den nye taggen med Swift Package Manager.</p></div>
+  </div>
+  <p>Token-browseren på <a href="https://bulderbank.github.io/DesignSystem/" target="_blank" rel="noopener">bulderbank.github.io/DesignSystem</a> oppdateres når <code>main</code> endres.</p>
+</section>
+<section>
+  <h2>Bygg og test lokalt</h2>
+  <pre><code># Generer alt (krever Swift, ImageMagick og Java)
+swift run DSCodegen
+
+# Eller i en container med Podman eller Docker
+./scripts/codegen-container.sh
+
+# Token-browseren, skrives til site/
+python3 scripts/generate_site.py
+
+# Tester på macOS
+swift test</code></pre>
+  <p class="app-caption">Asset-katalogen for iOS kan bare kompileres på macOS med Xcode. Kjør <code>scripts/validate_ios.sh</code> der.</p>
+</section>
+<section>
+  <h2>Kodestil</h2>
+  <ul class="list">
+    <li>Tokenfiler har beskrivende og stabile navn, for eksempel <code>Bulder colors.Light.tokens.json</code>.</li>
+    <li>Ikoner er SVG.</li>
+    <li>Lottie-filer har navn i lowerCamelCase, likt navnene i Figma.</li>
+    <li>Hold endringer til ASCII-tegn, med mindre filen allerede har andre tegn.</li>
+  </ul>
+</section>
+<section>
+  <h2>Tilganger</h2>
+  <div class="todo"><div class="app-overline">Mangler innhold</div><p>Her kommer: hvordan du får tilgang til repoet. Til da: spør i <b>#team-design</b>.</p></div>
+</section>

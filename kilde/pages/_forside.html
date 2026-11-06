@@ -1,0 +1,63 @@
+<!--@HERO@-->
+<div class="page single gutter">
+  <div class="wrap">
+    <main>
+      <section>
+        <h2>Finn fram</h2>
+        <div class="groups">
+          <a href="#needscope"><b>Visuell identitet</b><span>NeedScope, stil og tone, farger, ikoner, typografi, illustrasjoner, former og logo.</span></a>
+          <a href="#semantiske-farger"><b>Grunnleggende</b><span>Semantiske farger, spacing, responsiv styling og light og dark mode.</span></a>
+          <a href="#universell-utforming"><b>Universell utforming</b><span>Slik lager og tester vi løsninger som virker for alle.</span></a>
+          <a href="#prinsipper"><b>Om designsystemet</b><span>Prinsippene våre og svar på vanlige spørsmål.</span></a>
+          <a href="#alle-kan-bidra"><b>Bidra</b><span>Meld inn feil, kom med ønsker og bidra i Figma og på GitHub.</span></a>
+        </div>
+      </section>
+      <section>
+        <h2>For designere</h2>
+        <p>Komponentene ligger i Figma-biblioteket <a href="https://www.figma.com/design/B45x5kRHX7K90Z1PBEVcuFnj/Bulder-library?node-id=392-114&amp;t=sl4MITwgKI7fuc74-11" target="_blank" rel="noopener"><b>Bulder library</b></a>. Bruk komponentene og tokenene derfra, ikke egne farger eller tekststørrelser.</p>
+        <ul class="list">
+          <li>Design for en telefon som er 375 px bred, med <code>Header</code> øverst. Skjermer på toppnivå slutter med <code>BottomNavigation</code>.</li>
+          <li>Navngi farger etter token, for eksempel <code>On_Surface</code>, ikke etter hvordan de ser ut.</li>
+          <li>Én primærknapp per skjerm.</li>
+        </ul>
+        <h3>Designsystemet i Claude</h3>
+        <p>Hele designsystemet, med merkevarebok, tokens, 106 komponenter og alle bildefiler, ligger i <a href="https://claude.ai/artifact/DD4Am4KMqWiVPcRoF5w9gv" target="_blank" rel="noopener">Bulder designsystem</a>. Lim inn lenken i Claude og beskriv skjermen eller flyten du vil lage:</p>
+        <pre><code>Bruk Bulder-designsystemet https://claude.ai/artifact/DD4Am4KMqWiVPcRoF5w9gv og lag en prototype av flyten for sparemål: oversikt, nytt mål og bekreftelse.</code></pre>
+        <p>Du finner også et <a href="https://claude.ai/artifact/KwAX1BTrQdWWjwDczTuVUm" target="_blank" rel="noopener">jukseark på én side</a>.</p>
+      </section>
+      <section>
+        <h2>For utviklere</h2>
+        <p>Kilden er repoet <a href="https://github.com/bulderbank/DesignSystem" target="_blank" rel="noopener">bulderbank/DesignSystem</a>. Generatoren <code>DSCodegen</code> lager pakker for iOS og Android av tokens, ikoner, bilder og animasjoner. Alle tokens og ikoner kan du også se i <a href="https://bulderbank.github.io/DesignSystem/" target="_blank" rel="noopener">token-browseren</a>.</p>
+        <h3>iOS</h3>
+        <p>En Swift Package for iOS 16 og nyere, med farger og bilder i <code>.xcassets</code>, typografi og animasjoner. Pakken gir deg verdiene. Fontregistrering, Dynamic Type og Lottie-avspilling har appen selv ansvar for.</p>
+        <pre><code>// Package.swift
+      .package(url: "https://github.com/bulderbank/DesignSystem", from: "1.0.139")
+
+      // I koden
+      import DesignSystem
+
+      let heading = DS.Typography.App.h1
+      let size = heading.fontSize
+      let tracking = heading.fontSize * heading.letterSpacing
+      let animation = DS.Animation.checkmark.url</code></pre>
+        <h3>Android</h3>
+        <p>Et Compose-bibliotek for Android 6.0 (API 23) og nyere, med pakkenavnet <code>no.bulder.bank.designsystem</code>. Det har fargene som Material 3-fargeskjema for light og dark mode, et ekstra fargeskjema for Bulder-fargene som ikke finnes i Material 3, og ikonene som VectorDrawables.</p>
+        <pre><code>MaterialTheme(
+          colorScheme = if (isSystemInDarkTheme()) Theme.DarkColors else Theme.LightColors
+      ) {
+          // innholdet ditt
+      }</code></pre>
+        <p class="app-caption">Pakken publiseres til Google Artifact Registry (<code>europe-west1-maven.pkg.dev/bulder-shared/bulder-android-maven</code>).</p>
+      </section>
+      <section>
+        <h2>Bli med!</h2>
+        <p>Har du spørsmål om designsystemet, forslag til forbedringer eller noe annet på hjertet?</p>
+        <ul class="list">
+          <li>Si hei i <b>#team-design</b> på Slack.</li>
+          <li>Får du ikke svar der, kan du ta kontakt med John Le.</li>
+          <li>Les hvordan du <a href="#meld-inn-feil">melder inn feil</a> eller <a href="#kom-med-onske">kommer med ønsker</a>.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</div>

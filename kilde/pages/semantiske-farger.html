@@ -1,0 +1,55 @@
+<section>
+  <h2>Semantiske farger i Bulder</h2>
+  <p>En semantisk farge har navn etter hva den brukes til, for eksempel <code>SurfaceContainer</code> for kort eller <code>Error</code> for feil. Hver farge har én verdi i light mode og én i dark mode, så alt som bygges med dem, følger temaet av seg selv.</p>
+  <p>Bruk alltid de semantiske fargene i design og kode. Fargeskalaene (<code>blue-600</code>, <code>grey-100</code> …) mater bare de semantiske.</p>
+</section>
+<section>
+  <h2>Flater og tekst</h2>
+  {{semantic:Background,On_Background,Surface,SurfaceContainer,SurfaceContainer_High,On_Surface,On_Surface_Variant,Outline,Outline_Variant,Scrim,Shadow}}
+  <p class="app-caption">Bruk ikke <code>IKIKE_I_BRUK_SurfaceContainer_Lowest</code> eller <code>IKKE_I_BRUK_SurfaceContainer_Low</code>. De finnes bare fordi de ligger i kilden.</p>
+</section>
+<section>
+  <h2>Merkevare og aksenter</h2>
+  {{semantic:primary,On_Primary,Primary_Container,On_Primary_Container,Secondary,On_Secondary,Secondary_Container,On_Secondary_Container,Tertiary,On_Tertiary,Surface_Tint,bulder,on_bulder,bulder_light}}
+</section>
+<section>
+  <h2>Status og beløp</h2>
+  {{semantic:Positive,Negative,Error,On_Error,Error_Container,On_Error_Container,Warning,on_warning}}
+  <p>Totale beløp bruker <code>On_Surface</code>. <code>Positive</code> og <code>Negative</code> er bare for endringer opp og ned, og alltid med fortegn. <code>TransactionList</code> og <code>BeforeAfter</code> beholder fargene sine fra Figma.</p>
+</section>
+<section>
+  <h2>Navigasjon, bilder og kort</h2>
+  {{semantic:active_bottom_navigation,inactive_bottom_navigation,On_Image_Fixed,bulder_credit,on_bulder_credit,bulder_metall,on_bulder_metall,labs,on_labs}}
+</section>
+<section>
+  <h2>Datafarger</h2>
+  <p>Kategorier, betalingstyper, dokumenter i innboksen og Min Bulder har hver sin farge. Merket fylles med fargen, og ikonet bruker tilhørende <code>on_</code>-farge.</p>
+  <h3>Kategorier</h3>{{chips:categories-}}
+  <h3>Betaling</h3>{{chips:payment-}}
+  <h3>Min Bulder</h3>{{chips:min_bulder-}}
+  <h3>Innboks</h3>{{chips:inbox-}}
+  <h3>Grafer</h3>
+  <p>Bruk seriene i rekkefølge: <code>chart-1</code>, <code>chart-2</code> og videre. Kundeutbytte og husholdningsøkonomi har egne sett.</p>
+  {{chips:chart-}}
+  <h3>Kundeutbytte og husholdningsøkonomi</h3>{{chips:dividends-}}{{chips:economy-}}
+</section>
+<section>
+  <h2>Navnestruktur</h2>
+  <p>Navnene følger Material 3.</p>
+  <dl class="spec">
+    <dt>Rolle</dt><dd><span><code>primary</code>, <code>Secondary</code>, <code>Tertiary</code>, <code>Surface</code>, <code>Error</code></span><span class="app-caption">Hva fargen brukes til.</span></dd>
+    <dt>On_</dt><dd><span><code>On_Primary</code>, <code>On_Surface</code>, <code>on_warning</code></span><span class="app-caption">Tekst og ikoner som står på rollen.</span></dd>
+    <dt>_Container</dt><dd><span><code>Primary_Container</code>, <code>SurfaceContainer</code></span><span class="app-caption">En flate i rollens farge, for eksempel kort og bannere.</span></dd>
+    <dt>_Variant og _High</dt><dd><span><code>On_Surface_Variant</code>, <code>SurfaceContainer_High</code></span><span class="app-caption">En svakere eller sterkere utgave av rollen.</span></dd>
+    <dt>Prefiks</dt><dd><span><code>categories-</code>, <code>payment-</code>, <code>min_bulder-</code>, <code>chart-</code></span><span class="app-caption">Datafarger som hører til en bestemt type innhold.</span></dd>
+  </dl>
+</section>
+<section>
+  <h2>Fra skala til komponent</h2>
+  <p>Fargene ligger i tre lag. Komponentene bruker bare det midterste laget, så en farge kan endres ett sted.</p>
+  <div class="flow">
+    <div class="node"><small>Primitiv</small><code>blue-600</code></div><span class="arrow">→</span>
+    <div class="node"><small>Semantisk</small><code>primary</code></div><span class="arrow">→</span>
+    <div class="node"><small>Komponent</small><code>Button</code></div>
+  </div>
+</section>

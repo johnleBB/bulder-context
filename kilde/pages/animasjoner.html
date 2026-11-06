@@ -1,0 +1,30 @@
+<section>
+  <h2>Animasjonene i designsystemet</h2>
+  <p>Designsystemet har 71 Lottie-animasjoner. De ligger i mappen <code>animations/</code> i repoet, som JSON-filer med navn i lowerCamelCase, likt navnene i Figma.</p>
+  <ul class="list">
+    <li><b>iOS:</b> Når pakken genereres, kopieres filene inn i pakken, og hver animasjon blir en egen <code>DS.Animation</code> med en URL til filen.</li>
+    <li><b>Avspilling:</b> Appen har selv ansvar for Lottie-biblioteket, innstillingene for avspilling og visningen.</li>
+  </ul>
+  <pre><code>import DesignSystem
+
+let url = DS.Animation.checkmark.url</code></pre>
+</section>
+<section>
+  <h2>Alle animasjoner</h2>
+  <div class="names">
+    <code>armFlexing</code><code>baking</code><code>barChart</code><code>brb</code><code>buildingBank</code><code>buildingCastle</code><code>bulderLoader</code><code>calendarFlipping</code><code>car</code><code>card</code><code>cardBeingFlipped</code><code>cardBeingSwiped</code><code>chatBubble</code><code>checkmark</code><code>coinStacksGrowing</code><code>coinStacksSwitching</code><code>coinsInHand</code><code>coinsInJar</code><code>crown</code><code>crypto</code><code>cutInterest</code><code>documentFile</code><code>documentScanning</code><code>documentScroll</code><code>documentSigning</code><code>email</code><code>emptyBox</code><code>faceHappy</code><code>faceSad</code><code>faceSurprised</code><code>flag</code><code>globe</code><code>heartBroken</code><code>heartMending</code><code>highFive</code><code>hourClock</code><code>hourglass</code><code>kidBoy</code><code>kidGirl</code><code>kidTooYoung</code><code>labs</code><code>manAging</code><code>map</code><code>mobile</code><code>mobilePhones</code><code>moneyFallingIntoSlide</code><code>moneybag</code><code>moneybagInHand</code><code>movingTruck</code><code>padlock</code><code>passport</code><code>pieChart</code><code>playPause</code><code>robotCategorizing</code><code>robotChess</code><code>robotShrug</code><code>robotTrash</code><code>rocketLaunch</code><code>safePin</code><code>scale</code><code>searchPin</code><code>securityShield</code><code>sleeping</code><code>storkWithBaby</code><code>support</code><code>talkBubble</code><code>target</code><code>telescope</code><code>thumbsup</code><code>warning</code><code>wipeout</code>
+  </div>
+  <p class="app-caption">Forhåndsvisning av Lottie-filene kommer senere. Til nå finnes introen med ballen som ruller som bilde, se under.</p>
+</section>
+<section>
+  <h2>Introanimasjonen</h2>
+  <div class="anim" style="display:grid;gap:16px">
+    <button class="playbtn" data-play="anim-ball">Vis animasjonen</button>
+    <img id="anim-ball" hidden src="{{uri:Animated/rolling_ball_intro.webp}}" alt="Ballen som ruller, introanimasjonen i Bulder">
+    <p class="app-caption">rolling_ball_intro.webp, fra gruppen Animated</p>
+  </div>
+</section>
+<section>
+  <h2>Når og hvordan vi animerer</h2>
+  <div class="todo"><div class="app-overline">Mangler innhold</div><p>Her kommer: hvorfor vi animerer, når funksjonelle animasjoner hjelper kunden, varighet og easing, hvordan vi tar hensyn til redusert bevegelse, og om det skal finnes tokens for dette.</p></div>
+</section>

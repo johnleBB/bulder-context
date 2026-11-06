@@ -1,0 +1,37 @@
+<section>
+  <h2>Merkefargene</h2>
+  <p>Fire farger bærer Bulder: merket, tekstfargen, den blå merkefargen og den grønne aksenten. I løsningene bruker du dem gjennom de <a href="#semantiske-farger">semantiske fargene</a>, ikke direkte.</p>
+  {{tiles:red-500=brand,dark_blue-800=Ordmerke og tekst,blue-600=primary,green-500=Grønn aksent}}
+  <ul class="list">
+    <li>Merket er <code>red-500</code> (#FE4D5B). Bruk aldri den gamle «Watermelon» (#FF4D5B).</li>
+    <li>Ordmerket og merkevaretekst bruker <code>dark_blue-800</code> (#0F1729). Bruk aldri den gamle #171E30.</li>
+  </ul>
+</section>
+<section>
+  <h2>Fargeskalaer</h2>
+  <p>Hver skala har ni trinn, fra 100 til 900. Dette er primitiver: de mater de semantiske fargene og skal ikke brukes rett i en komponent.</p>
+  <h3>Blue</h3>{{scale:blue}}
+  <h3>Dark blue</h3>{{scale:dark_blue}}
+  <h3>Grey</h3>{{scale:grey}}
+  <h3>Red</h3>{{scale:red}}
+  <h3>Green</h3>{{scale:green}}
+  <h3>Yellow</h3>{{scale:yellow}}
+  <h3>Purple</h3>{{scale:purple}}
+  <h3>Pink</h3>{{scale:pink}}
+</section>
+<section>
+  <h2>Partnerfarger</h2>
+  <p>Disse fargene tilhører partnerne våre og brukes bare sammen med dem.</p>
+  {{tiles:payment-vipps=Vipps,payment-bankid=BankID,payment-laanekassen=Lånekassen,sbn=SpareBank 1 Nord-Norge}}
+</section>
+<section>
+  <h2>Fargekombinasjoner</h2>
+  <p>Hver flate har sin egen farge for det som står på den: <code>On_</code>-fargen. Bruk alltid paret sammen. Kombinasjonene under følger temaet du ser siden i.</p>
+  {{pairs:SurfaceContainer/On_Surface,primary/On_Primary,Secondary/On_Secondary,Tertiary/On_Tertiary,bulder/on_bulder,Warning/on_warning,Error_Container/On_Error_Container}}
+  <h3>Ikke tillatt bruk av kombinasjoner</h3>
+  <ul class="list">
+    <li><code>primary</code> som tekst i dark mode. Den har bare 1,9:1 i kontrast mot <code>Background</code>.</li>
+    <li><code>Warning</code> som tekst. Den har bare 1,5:1 på lys bakgrunn. Bruk den som fyll med <code>on_warning</code>.</li>
+    <li>Brødtekst i <code>grey-100</code> på <code>categories-media</code>, <code>categories-saving</code>, <code>categories-div</code>, <code>payment-vipps</code>, <code>payment-saving</code>, <code>payment-subscription</code>, <code>payment-recurring_payment</code>, <code>payment-international_payment</code>, <code>min_bulder-referral</code>, <code>min_bulder-dividends</code> og <code>inbox-interestChangeNotice</code>. Der holder kontrasten bare til ikoner og stor tekst.</li>
+  </ul>
+</section>

@@ -1,0 +1,42 @@
+<section>
+  <h2>Light mode og dark mode</h2>
+  <p>Hver semantiske farge har én verdi i light mode og én i dark mode. Når du bygger med de semantiske fargene, følger designet temaet av seg selv.</p>
+  <div class="duo">
+    <div class="mode force-light">
+      <div class="app-overline">Light mode</div>
+      <div class="screen">
+        <div class="rows" style="padding:16px;display:grid;gap:8px">
+          <span class="app-overline">Brukskonto</span>
+          <span style="font-size:1.625rem;font-weight:700" class="num">12 480,50 kr</span>
+          <span class="app-caption">1234 56 78901</span>
+          <span style="color:var(--Positive);font-weight:500" class="num">+ 1 250,00 kr i dag</span>
+        </div>
+        <button class="playbtn" style="justify-self:stretch" tabindex="-1">Overfør</button>
+      </div>
+    </div>
+    <div class="mode force-dark">
+      <div class="app-overline">Dark mode</div>
+      <div class="screen">
+        <div class="rows" style="padding:16px;display:grid;gap:8px">
+          <span class="app-overline">Brukskonto</span>
+          <span style="font-size:1.625rem;font-weight:700" class="num">12 480,50 kr</span>
+          <span class="app-caption">1234 56 78901</span>
+          <span style="color:var(--Positive);font-weight:500" class="num">+ 1 250,00 kr i dag</span>
+        </div>
+        <button class="playbtn" style="justify-self:stretch" tabindex="-1">Overfør</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Regler for bruk</h2>
+  <ul class="list">
+    <li>Bruk bare semantiske farger. En primitiv som <code>grey-100</code> har samme verdi i begge temaer.</li>
+    <li>Test alltid designet i begge temaer.</li>
+    <li>Logoen byttes: <code>bulder_logo_dark.svg</code> i light mode og <code>bulder_logo_light.svg</code> i dark mode.</li>
+  </ul>
+</section>
+<section>
+  <h2>Navngivning</h2>
+  <p>Fargene har navn etter Material 3, med <code>On_</code> foran det som står på en flate. Se <a href="#semantiske-farger">Semantiske farger</a>.</p>
+</section>

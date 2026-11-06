@@ -1,0 +1,61 @@
+<section>
+  <h2>Generelt</h2>
+  <p>Alle kundene våre skal kunne bruke Bulder, også de som ser dårlig, bruker skjermleser, har store tekster eller styrer telefonen på andre måter. Vi følger WCAG 2.1 på nivå A og AA. Se <a href="#uu-testing">Testing av universell utforming</a> for hvordan du tester hvert krav.</p>
+</section>
+<section>
+  <h2>Bruk tydelig språk</h2>
+  <h3>Beskrivende tekst i knapper og lenker</h3>
+  <p>Knappen skal si hva som skjer, for eksempel «Overfør» eller «Lagre sparemål», ikke «OK» eller «Klikk her».</p>
+  <h3>Beskrivende overskrifter</h3>
+  <p>Overskriften skal fortelle hva som står under. Mange skjermleserbrukere hopper fra overskrift til overskrift.</p>
+  <h3>Skriv slik kunden snakker</h3>
+  <p>Følg <a href="#stil-og-tone">Stil og tone</a>: kort, direkte og med vanlige ord.</p>
+  <h3>Alternativer til det som ikke er tekst</h3>
+  <p>Bilder og ikoner som betyr noe, skal ha en tekst som beskriver dem. Ikoner som bare pynter, skjules for skjermleser.</p>
+</section>
+<section>
+  <h2>Vær visuelt tydelig</h2>
+  <h3>Bruk kjente mønstre</h3>
+  <p>Bruk komponentene i designsystemet. De oppfører seg likt overalt, så kunden kjenner dem igjen.</p>
+  <h3>Sørg for god kontrast</h3>
+  <p>Tekst skal ha minst 4,5:1 i kontrast, og stor tekst og ikoner minst 3:1. Parene med <code>On_</code>-farger holder dette, med noen kjente unntak:</p>
+  <ul class="list">
+    <li><code>primary</code> som tekst i dark mode (1,9:1) og <code>Warning</code> som tekst (1,5:1).</li>
+    <li><code>grey-100</code> på noen datafarger, for eksempel <code>payment-vipps</code> og <code>min_bulder-referral</code> (2,7:1). Der holder kontrasten bare til ikoner og stor tekst. Se hele listen under <a href="#farger">Farger</a>.</li>
+    <li><code>active_bottom_navigation</code> har 2,8:1 på lys bakgrunn. Valgt fane må derfor også vises med tykkere tekst.</li>
+    <li><code>Outline_Variant</code> er laget med lav kontrast og kan aldri være eneste tegn på en kontroll.</li>
+  </ul>
+  <h3>Bruk ikke bare farge</h3>
+  <p>Beløp skal alltid ha fortegn eller en forklarende tekst. Feil skal ha både farge, ikon og tekst.</p>
+  <h3>Sett maks 80 tegn som tekstbredde</h3>
+  <p>Lange linjer er tunge å lese. På nettsiden holder vi brødtekst under 80 tegn per linje.</p>
+  <h3>Stor nok trykkflate</h3>
+  <p>Alt man kan trykke på, skal ha en trykkflate på minst 44 × 44 px (<code>basewithicon-touch</code>), selv om ikonet er mindre.</p>
+  <h3>Gi tilbakemelding</h3>
+  <p>Vis at noe har skjedd: at en knapp er trykket, at et felt har feil, eller at en betaling er sendt.</p>
+  <h3>Husk at noen forstørrer teksten</h3>
+  <p>På nettsiden oppgis tekst i rem, så den følger nettleseren. I appen må skjermene tåle største tekststørrelse. Se <a href="#responsiv-styling">Responsiv styling</a>.</p>
+</section>
+<section>
+  <h2>Skriv semantisk HTML</h2>
+  <h3>Bruk elementer som beskriver innholdet</h3>
+  <p>Bruk <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> og <code>&lt;label&gt;</code> til det de er laget for. Bruk <code>&lt;div&gt;</code> og <code>&lt;span&gt;</code> bare til oppsett.</p>
+  <h3>Bruk ARIA bare når HTML ikke holder</h3>
+  <p>ARIA kan gi en kontroll navn, rolle og tilstand, men et vanlig HTML-element er nesten alltid bedre.</p>
+  <h3>Overskrifter i riktig rekkefølge</h3>
+  <p>Én <code>&lt;h1&gt;</code> per side, og ikke hopp over nivåer.</p>
+  <h3>Lenke eller knapp?</h3>
+  <p>En lenke tar deg til et annet sted. En knapp gjør noe på siden du er på.</p>
+  <h3>Bilder</h3>
+  <p>Gi bilder en <code>alt</code>-tekst som sier det samme som bildet. Bilder som bare pynter, får <code>alt=""</code>.</p>
+  <p>I appen gjelder det samme: gi elementene riktig rolle og etikett i iOS og Android, slik at VoiceOver og TalkBack leser dem riktig.</p>
+</section>
+<section>
+  <h2>Nyttige verktøy</h2>
+  <ul class="list">
+    <li>Skjermleser: VoiceOver på iOS og macOS, TalkBack på Android og NVDA på Windows.</li>
+    <li>Automatisk testing i nettleseren: axe DevTools, WAVE og Lighthouse.</li>
+    <li>Kontrast: kontrastsjekker i Figma, eller Contrast Checker fra WebAIM.</li>
+    <li>Accessibility Inspector i Xcode og Accessibility Scanner på Android.</li>
+  </ul>
+</section>

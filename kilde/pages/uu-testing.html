@@ -1,0 +1,45 @@
+<section>
+  <h2>Introduksjon</h2>
+  <p>Her er kravene i WCAG 2.1 som oftest gjelder for oss, sortert etter de fire prinsippene. Hvert krav har en kort forklaring og hvordan du tester det. Test med tastatur og skjermleser i tillegg til automatiske verktøy, fordi verktøyene bare finner en del av feilene.</p>
+</section>
+<section>
+  <h2>Prinsipp 1: Mulig å oppfatte</h2>
+  <div class="crit"><h3>Ikke-tekstlig innhold (1.1.1)</h3><p>Bilder, ikoner og grafer som betyr noe, har en tekst som sier det samme.</p><p class="how">Test: Slå på skjermleser og gå gjennom siden. Får du vite hva hvert bilde og ikon betyr? Pyntebilder skal hoppes over.</p></div>
+  <div class="crit"><h3>Informasjon og relasjoner (1.3.1)</h3><p>Overskrifter, lister, tabeller og skjemaetiketter er kodet som det de ser ut som.</p><p class="how">Test: Hopp mellom overskrifter med skjermleser. Sjekk at hvert felt leses opp med etiketten sin.</p></div>
+  <div class="crit"><h3>Meningsfylt rekkefølge (1.3.2)</h3><p>Rekkefølgen skjermleseren leser i, gir mening.</p><p class="how">Test: Les siden fra start til slutt med skjermleser.</p></div>
+  <div class="crit"><h3>Bruk av farge (1.4.1)</h3><p>Farge er aldri eneste måte å vise noe på.</p><p class="how">Test: Se på skjermen i gråtoner. Ser du fortsatt forskjell på inn- og utbetalinger, feil og valgte faner?</p></div>
+  <div class="crit"><h3>Kontrast (1.4.3)</h3><p>Tekst har minst 4,5:1 i kontrast, og stor tekst minst 3:1.</p><p class="how">Test: Sjekk farger som ikke er et godkjent <code>On_</code>-par, med en kontrastsjekker. Se unntakene under <a href="#universell-utforming">Universell utforming</a>.</p></div>
+  <div class="crit"><h3>Endring av tekststørrelse (1.4.4)</h3><p>Teksten kan forstørres til 200 % uten at noe forsvinner.</p><p class="how">Test: Zoom til 200 % i nettleseren, og sett største tekststørrelse på telefonen.</p></div>
+  <div class="crit"><h3>Bilde av tekst (1.4.5)</h3><p>Tekst er ekte tekst, ikke et bilde.</p><p class="how">Test: Prøv å markere teksten, eller forstørr og se om den blir uskarp.</p></div>
+</section>
+<section>
+  <h2>Prinsipp 2: Mulig å betjene</h2>
+  <div class="crit"><h3>Tastatur (2.1.1)</h3><p>Alt kan brukes med tastatur.</p><p class="how">Test: Legg bort musen og bruk Tab, Shift+Tab, Enter, mellomrom og piltaster.</p></div>
+  <div class="crit"><h3>Ingen tastaturfelle (2.1.2)</h3><p>Du kommer alltid ut av en komponent med tastaturet.</p><p class="how">Test: Gå inn i og ut av modaler, menyer og felt med tastatur.</p></div>
+  <div class="crit"><h3>Hoppe over blokker (2.4.1)</h3><p>Du kan hoppe forbi menyen og rett til innholdet.</p><p class="how">Test: Trykk Tab første gang på siden. Kommer det en lenke for å hoppe til innholdet?</p></div>
+  <div class="crit"><h3>Sidetitler (2.4.2)</h3><p>Hver side har en tittel som sier hva den handler om.</p><p class="how">Test: Se på fanen i nettleseren, eller hør hva skjermleseren sier når skjermen åpnes.</p></div>
+  <div class="crit"><h3>Fokusrekkefølge (2.4.3)</h3><p>Fokus flytter seg i en rekkefølge som gir mening.</p><p class="how">Test: Tab gjennom siden og følg med på hvor fokus går.</p></div>
+  <div class="crit"><h3>Formål med lenke i kontekst (2.4.4)</h3><p>Du forstår hvor lenken går av teksten og det som står rundt.</p><p class="how">Test: List opp alle lenkene med skjermleser. Gir de mening alene?</p></div>
+  <div class="crit"><h3>Flere måter (2.4.5)</h3><p>Det finnes mer enn én måte å finne en side på, for eksempel meny og søk.</p><p class="how">Test: Prøv å finne siden både via menyen og på en annen måte.</p></div>
+  <div class="crit"><h3>Overskrifter og ledetekster (2.4.6)</h3><p>Overskrifter og etiketter beskriver innholdet.</p><p class="how">Test: Les bare overskriftene. Forstår du hva siden handler om?</p></div>
+  <div class="crit"><h3>Synlig fokus (2.4.7)</h3><p>Du ser alltid hvor fokus er.</p><p class="how">Test: Tab gjennom siden i både light mode og dark mode.</p></div>
+</section>
+<section>
+  <h2>Prinsipp 3: Forståelig</h2>
+  <div class="crit"><h3>Språk på siden (3.1.1)</h3><p>Siden har riktig språk, for eksempel <code>lang="nb"</code>.</p><p class="how">Test: Sjekk koden, og hør om skjermleseren uttaler teksten på norsk.</p></div>
+  <div class="crit"><h3>Språk på deler av innholdet (3.1.2)</h3><p>Tekst på et annet språk er merket med det språket.</p><p class="how">Test: Finn tekst på engelsk og sjekk at den har eget <code>lang</code>.</p></div>
+  <div class="crit"><h3>Fokus (3.2.1)</h3><p>Ingenting skjer bare fordi noe får fokus.</p><p class="how">Test: Tab gjennom siden. Åpnes det noe uventet?</p></div>
+  <div class="crit"><h3>Inndata (3.2.2)</h3><p>Det skjer ingen store endringer bare fordi du fyller ut et felt eller gjør et valg.</p><p class="how">Test: Fyll ut skjemaer og gjør valg. Sendes noe eller byttes siden uten at du ber om det?</p></div>
+  <div class="crit"><h3>Konsekvent navigering (3.2.3)</h3><p>Menyen ligger på samme sted og i samme rekkefølge på alle sider.</p><p class="how">Test: Sammenlign menyen på flere sider.</p></div>
+  <div class="crit"><h3>Konsekvent identifikasjon (3.2.4)</h3><p>Det som har samme funksjon, ser likt ut og heter det samme.</p><p class="how">Test: Sjekk at for eksempel innstillinger har samme ikon overalt. Se <a href="#ikoner">Ikoner</a>.</p></div>
+  <div class="crit"><h3>Identifikasjon av feil (3.3.1)</h3><p>Feil vises med tekst som sier hva som er galt.</p><p class="how">Test: Send inn et skjema med feil. Leses feilen opp, og står den ved feltet (<code>ErrorMessage</code>)?</p></div>
+  <div class="crit"><h3>Ledetekster eller instruksjoner (3.3.2)</h3><p>Felt har en etikett og forklaring når det trengs.</p><p class="how">Test: Sjekk at hvert felt har en synlig etikett, ikke bare plassholdertekst.</p></div>
+  <div class="crit"><h3>Forslag ved feil (3.3.3)</h3><p>Feilmeldingen forteller hvordan du retter feilen.</p><p class="how">Test: Les feilmeldingene. Sier de hva du skal gjøre?</p></div>
+  <div class="crit"><h3>Forhindring av feil (3.3.4)</h3><p>Når det gjelder penger eller juridiske avtaler, kan kunden se over, rette eller angre før noe sendes.</p><p class="how">Test: Gå gjennom en betaling. Finnes det et steg der du ser over og bekrefter, for eksempel <code>SafetyButton</code>?</p></div>
+</section>
+<section>
+  <h2>Prinsipp 4: Robust</h2>
+  <div class="crit"><h3>Parsing (4.1.1)</h3><p>Koden er gyldig, uten dupliserte ID-er. Kravet er tatt ut av WCAG 2.2, men står fortsatt i 2.1.</p><p class="how">Test: Kjør koden gjennom en HTML-validator.</p></div>
+  <div class="crit"><h3>Navn, rolle, verdi (4.1.2)</h3><p>Alle kontroller har et navn, en rolle og en tilstand som skjermleseren kan lese.</p><p class="how">Test: Gå til en <code>Toggle</code> med skjermleser. Hører du hva den heter, at den er en bryter, og om den er på eller av?</p></div>
+  <div class="crit"><h3>Statusbeskjeder (4.1.3)</h3><p>Beskjeder som «Kopiert» eller «Betalingen er sendt» leses opp uten at fokus flyttes.</p><p class="how">Test: Utløs en statusbeskjed med skjermleser på.</p></div>
+</section>
