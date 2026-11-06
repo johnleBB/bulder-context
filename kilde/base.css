@@ -33,10 +33,6 @@ a{color:var(--primary)}
 .wrap{max-width:1120px;margin:0 auto}
 
 /* top bar */
-.topbar{background:var(--SurfaceContainer);border-bottom:1px solid var(--Outline_Variant)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-large);padding-block:var(--space-large)}
-.topbar .brand svg{height:22px;width:auto}
-.tag{font-size:.75rem;font-weight:500;letter-spacing:.04em;background:var(--SurfaceContainer_High);color:var(--On_Surface_Variant);padding:2px 8px;border-radius:var(--roundCorner-small)}
 
 /* hero: Bulder library «mønster/1» – trekanter i merkefargen fra venstre på bulder-flaten, tittel til høyre */
 .hero{background:var(--bulder);color:var(--On_Image_Fixed);display:flex;align-items:stretch;min-height:320px;overflow:hidden;border-bottom:1px solid var(--Outline_Variant)}

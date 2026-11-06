@@ -18,27 +18,16 @@ syncThemeBtn();
 
 // --- ruting: én artikkel per side, valgt med #slug ---
 const pagesEl = [...document.querySelectorAll("article[data-page]")];
-const drawer = $("#drawer"), openBtn = $("#menu-open");
-function setMenu(open) {
-  drawer.hidden = !open;
-  openBtn.setAttribute("aria-expanded", open);
-  if (open) {
-    const cur = drawer.querySelector("a[aria-current]");
-    if (cur) cur.closest("details")?.setAttribute("open", "");
-    (cur || $("#menu-close")).focus();
-  } else openBtn.focus();
-}
-openBtn.onclick = () => setMenu(true);
-$("#menu-close").onclick = $("#menu-scrim").onclick = () => setMenu(false);
-document.addEventListener("keydown", e => { if (e.key === "Escape" && !drawer.hidden) setMenu(false); });
-drawer.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+const side = $("#side");
 
 function show() {
   const slug = location.hash.slice(1);
   const page = pagesEl.find(a => a.dataset.page === slug) || pagesEl[0];
   pagesEl.forEach(a => a.hidden = a !== page);
   document.title = page.dataset.page === "forside" ? "Bulder designsystem" : `${page.dataset.title} · Bulder designsystem`;
-  drawer.querySelectorAll("a").forEach(a => a.toggleAttribute("aria-current", a.hash === "#" + page.dataset.page));
+  side.querySelectorAll("a[href^='#']").forEach(a => a.toggleAttribute("aria-current", a.hash === "#" + page.dataset.page));
+  // på smal skjerm ligger menyen over innholdet, så gruppene holdes lukket der
+  if (matchMedia("(min-width: 768px)").matches) side.querySelector("a[aria-current]")?.closest("details")?.setAttribute("open", "");
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 window.addEventListener("hashchange", show);
